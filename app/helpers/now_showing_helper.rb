@@ -1,0 +1,2 @@
+module NowShowingHelper
+end

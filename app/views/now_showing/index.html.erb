@@ -1,0 +1,53 @@
+<div id="banner">
+	<div id="slider">
+		<div class="viewer">
+			<div class="reel">
+				<div class="slide">
+					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-1">Full story ...</a> <img src="/images/pic01.jpg" alt="" /> </div>
+				<div class="slide">
+					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-2">Full story ...</a> <img src="/images/pic02.jpg" alt="" /> </div>
+			</div>
+		</div>
+		<div class="indicator">
+			<ul>
+				<li class="active">1</li>
+				<li>2</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#slider').slidertron({
+			viewerSelector: '.viewer',
+			reelSelector: '.viewer .reel',
+			slidesSelector: '.viewer .reel .slide',
+			advanceDelay: 3000,
+			speed: 'slow',
+			navPreviousSelector: '.previous-button',
+			navNextSelector: '.next-button',
+			indicatorSelector: '.indicator ul li',
+			slideLinkSelector: '.link'
+		});
+	</script> 
+</div>
+<div id="wrapper">
+	<div id="page" class="container">
+		<div id="content"> <img src="/images/pic08.jpg" width="235" height="235" alt="" />
+			<h2>Nulla luctus eleifend</h2>
+			<p>This is <strong>Refreshen</strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org">FCT</a>.   The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
+		</div>
+		<div id="sidebar">
+			<div>
+				<h2>Categories</h2>
+				<ul class="style1">
+					<li class="first">
+						<p><a href="#">Ipsum ante vivamus semper faucibus varius. Nam risus nibh, commodo vulputate.</a></p>
+						<span class="posted">8 hours ago</span> </li>
+					<li>
+						<p><a href="#">Sed amet consequat lorem ipsum dolor sit amet blandit feugiat lorem ipsum sed ante nibh.</a></p>
+						<span class="posted">1 day ago</span> </li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</div>
+
