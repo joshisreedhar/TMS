@@ -1,0 +1,7 @@
+<h1>Create new certificate</h1>
+
+<%= form_tag :controller => 'certificate', :action => 'create' do %>
+<%= label_tag 'Certificate' %>
+<%= text_field_tag 'certificate_name' %><br>
+<%= button_tag "Save", :disable_with => "Please wait..." %>
+ <% end %>

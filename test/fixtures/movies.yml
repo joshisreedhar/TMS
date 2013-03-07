@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  certificate_id: 1
+  lead_cast: MyString
+  director: MyString
+  producer: MyString
+  duration: MyString
+  description: MyText
+  small_image_url: MyString
+  large_image_url: MyString
+
+two:
+  name: MyString
+  certificate_id: 1
+  lead_cast: MyString
+  director: MyString
+  producer: MyString
+  duration: MyString
+  description: MyText
+  small_image_url: MyString
+  large_image_url: MyString

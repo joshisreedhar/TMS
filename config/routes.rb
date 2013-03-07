@@ -1,4 +1,16 @@
 TMS::Application.routes.draw do
+  get "admin/index"
+
+  get "movie/index"
+
+  get "movie/new"
+
+  get "certificate/index"
+
+  get "certificate/new"
+
+  post "certificate/create"
+
   get "now_showing/index"
 
   # The priority is based upon order of creation:
