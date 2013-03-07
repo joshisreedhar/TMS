@@ -1,0 +1,8 @@
+<h1> Show Times </h1>
+
+<%= form_tag :controller => 'showtime', :action => 'create' do %>
+<%= label_tag 'ShowTime' %>
+<%= text_field_tag 'time' %><br>
+<%= text_area_tag 'Description' %><br>
+<%= button_tag "Save", :disable_with => "Please wait..." %>
+ <% end %>

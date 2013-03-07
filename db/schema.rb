@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307045923) do
+ActiveRecord::Schema.define(:version => 20130307170852) do
 
   create_table "certificates", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,28 @@ ActiveRecord::Schema.define(:version => 20130307045923) do
     t.string   "large_image_url"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "showtimes", :force => true do |t|
+    t.string   "time"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "theatres", :force => true do |t|
+    t.string   "name"
+    t.string   "imageurl"
+    t.text     "address"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "theatreshows", :force => true do |t|
+    t.integer  "theatre_id"
+    t.integer  "show_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -1,0 +1,2 @@
+module ConfigureTheatreshowHelper
+end

@@ -1,4 +1,20 @@
 TMS::Application.routes.draw do
+  get "configure_theatreshow/index"
+
+  get "theatre/index"
+
+  get "theatre/new"
+
+  post "theatre/create"
+
+   get "theatre/configure"
+
+  get "showtime/index"
+
+  get "showtime/new"
+
+  post "showtime/create"
+
   get "admin/index"
 
   get "movie/index"
