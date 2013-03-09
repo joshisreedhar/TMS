@@ -1,12 +1,14 @@
 class ShowtimeController < ApplicationController
-  def index
+  def index    
   	@showtimes = Showtime.all
+    render :layout => 'admin'
   end
 
   def new
+    render :layout => 'admin'
   end
 
-  def create
+  def create   
   	@newshowtime = Showtime.new
   	@newshowtime.time = params[:time]
   	@newshowtime.description = params[:Description]
@@ -16,6 +18,6 @@ class ShowtimeController < ApplicationController
   	else
   		render('new')
   	end
-
+    render :layout => 'admin'
   end
 end

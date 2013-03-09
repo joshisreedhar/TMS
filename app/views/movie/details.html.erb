@@ -1,0 +1,29 @@
+<h1><%= @movie.name %> </h1>
+
+<div class="moviewpreview">
+<%= image_tag(@movie.small_image_url) %>
+
+	<table class="moviewpreview">
+		<tr>
+			<td> Cast: </td>
+			<td class="datafield"> <%= @movie.lead_cast %></td>			
+		</tr>
+		<tr>
+			<td> Director: </td>
+			<td class="datafield"> <%= @movie.director %></td>			
+		</tr>
+		<tr>
+			<td> Producer: </td>
+			<td class="datafield"> <%= @movie.producer %></td>			
+		</tr>
+		<tr>
+			<td> Duration: </td>
+			<td class="datafield"> <%= @movie.duration %></td>			
+		</tr>
+		<tr>
+			<td> Certificate: </td>
+			<td class="datafield"> 
+		</tr>
+		<p><%= @movie.description %></p>
+	</table>
+</div>

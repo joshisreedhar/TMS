@@ -4,10 +4,13 @@ class TheatreController < ApplicationController
   end
 
   def new
+     @showtimes = Showtime.all
+    render :layout => 'admin'
   end
 
   def create
   	@newtheatre = Theatre.new
+   
 
   	@newtheatre.name = params[:theatre_name]
   	@newtheatre.imageurl = params[:image_url]
@@ -23,7 +26,7 @@ class TheatreController < ApplicationController
 
   def configure
 
-@showtimes = Showtime.all
+    @showtimes = Showtime.all
   	@theatreshowtime = Theatreshow.new 
 
 

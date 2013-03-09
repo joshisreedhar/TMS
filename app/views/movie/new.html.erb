@@ -1,2 +1,44 @@
-<h1>Movie#new</h1>
-<p>Find me in app/views/movie/new.html.erb</p>
+<h1>Add Movie</h1>
+<%= form_tag :action=>'create' do %>
+<div style="margin-top:20px">
+<table>
+	<tr>
+		<td><%= label_tag 'Movie Name' %></td>
+		<td class="datafield"><%= text_field_tag 'movie_name',nil,:class=>"datavalue" %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Lead Cast' %></td>
+		<td class="datafield"><%= text_area_tag 'lead_cast' %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Director' %></td>
+		<td class="datafield"><%= text_field_tag 'director',nil,:class=>"datavalue"  %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Producer' %></td>
+		<td class="datafield"><%= text_field_tag 'producer',nil,:class=>"datavalue"  %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Small Image url' %></td>
+		<td class="datafield"><%= text_field_tag 'small_image_url',nil,:class=>"datavalue"  %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Large Image url' %></td>
+		<td class="datafield"><%= text_field_tag 'large_image_url',nil,:class=>"datavalue"  %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Certificate' %></td>
+		<td class="datafield"><%= select_tag "certificate_id", options_from_collection_for_select(@certificates, "id", "name") %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Duration' %></td>
+		<td class="datafield"><%= text_field_tag 'duration',nil,:class=>"datavalue"  %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'About' %></td>
+		<td class="datafield"><%= text_area_tag 'description' %></td>
+	</tr>
+</table>
+</div>
+<%= submit_tag "Save", :disable_with => "Please wait..." %>
+<% end %>

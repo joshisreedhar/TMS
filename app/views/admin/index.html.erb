@@ -1,10 +1,40 @@
-
-
-	<h1>Admin Page</h1>
-
-<%= link_to "Movies", :controller => 'movie', :action => 'index' %><br>
-<%= link_to "Add new movie", :controller => 'movie', :action => 'new' %><br>
-<%= link_to "Add new showtime", :controller=> 'showtime', :action => 'new' %><br>
-<%= link_to "Add new certificate", :controller => 'certificate', :action => 'new'  %><br>
-<%= link_to "Add new Theatre", :controller => 'theatre', :action => 'new'  %>
-
+<div>
+	<h3>Manage Movies</h3>
+		<div>
+			<p>
+				<ul>
+					<li><%= link_to "Show Movies", :controller => 'movie', :action => 'index' %></li>
+					<li><%= link_to "Add new movie", :controller => 'movie', :action => 'new' %></li>
+				<ul>
+			</p>
+		</div>
+	<h3>Manage Theatres</h3>
+		<div>
+			<p>
+				<ul>
+					<li><%= link_to "Show Theatres", :controller => 'theatre', :action => 'index'  %></li>
+					<li><%= link_to "Add new Theatre", :controller => 'theatre', :action => 'new'  %></li>
+					<li><%= link_to "Configure Theatre Shows", :controller => 'theatre', :action => 'new'  %></li>
+				</ul>
+			</p>
+		</div>
+	<h3>Manage Users</h3>
+		<div>
+			<p>
+				<ul>
+					<li>Work in progress</li>
+				<ul>
+			</p>
+		</div>
+	<h3>Others</h3>
+		<div style="display: block;height:50px;">
+		
+				<ul>
+					<li><%= link_to "Show Showtimes", :controller=> 'showtime', :action => 'index' %></li>
+					<li><%= link_to "Add new showtime", :controller=> 'showtime', :action => 'new' %></li>
+					<ii><%= link_to "Show Certificates", :controller => 'certificate', :action => 'index'  %></li>
+					<ii><%= link_to "Add new certificate", :controller => 'certificate', :action => 'new'  %></li>
+				</ul>
+			
+		</div>
+</div>

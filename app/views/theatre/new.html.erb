@@ -1,11 +1,44 @@
 <h1>New Theatre</h1>
 
 <%= form_tag :controller => 'theatre', :action => 'create' do %>
-<%= label_tag 'Theatre name' %>
-<%= text_field_tag 'theatre_name' %><br>
-<%= label_tag 'Image Url' %>
-<%= text_field_tag 'image_url' %><br>
-<%= label_tag 'Address' %>
-<%= text_area_tag 'address' %><br>
-<%= button_tag "Next", :disable_with => "Please wait..." %>
+<div style="margin-top:20px">
+<table>
+	<tr>
+		<td>
+			<%= label_tag 'Theatre name' %>
+		</td>
+		<td class="datafield">
+			<%= text_field_tag 'theatre_name' %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= label_tag 'Image Url' %>			
+		</td>
+		<td class="datafield">
+			<%= text_field_tag 'image_url' %>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<%= label_tag 'Show times' %>
+		</td>
+		<td class="datafield">
+			<% @showtimes.each do |showtime| %>
+				<%= label_tag showtime.time %>
+				<%= check_box_tag 'show', showtime.id %>
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= label_tag 'Address' %>
+		</td>
+		<td class="datafield">
+			<%= text_area_tag 'address' %>
+		</td>
+	</tr>
+</table>
+</div>
+<%= submit_tag "Save", :disable_with => "Please wait..." %>
  <% end %>

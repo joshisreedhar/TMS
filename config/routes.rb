@@ -7,12 +7,12 @@ TMS::Application.routes.draw do
 
   post "theatre/create"
 
-   get "theatre/configure"
+  get "theatre/configure"
 
   get "showtime/index"
 
   get "showtime/new"
-
+  
   post "showtime/create"
 
   get "admin/index"
@@ -20,6 +20,10 @@ TMS::Application.routes.draw do
   get "movie/index"
 
   get "movie/new"
+
+  post "movie/create"
+
+  get "movie/details"
 
   get "certificate/index"
 
