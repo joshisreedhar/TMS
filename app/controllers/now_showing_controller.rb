@@ -5,7 +5,7 @@ class NowShowingController < ApplicationController
   	@certificates = Certificate.all  	
   	@movies.each do |movie|  
   	if movie.certificate_id  			
-  		certificate = Certificate.find(5)  		
+  		certificate = Certificate.find(movie.certificate_id)  		
   		movie.name = "#{movie.name}, #{certificate.name}";
   	else
   		movie.name = "#{movie.name}"
