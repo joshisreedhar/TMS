@@ -1,4 +1,8 @@
 TMS::Application.routes.draw do
+  get "options/index"
+
+  get "show/update"
+
   get "configure_theatreshow/index"
 
   get "theatre/index"
@@ -9,11 +13,17 @@ TMS::Application.routes.draw do
 
   get "theatre/configure"
 
+  get "theatre/configureshow"
+
+  get "theatre/details"
+
   get "showtime/index"
 
   get "showtime/new"
   
   post "showtime/create"
+
+  post "show/update"
 
   get "admin/index"
 
@@ -32,6 +42,10 @@ TMS::Application.routes.draw do
   post "certificate/create"
 
   get "now_showing/index"
+
+  post "options/index"
+
+  get "booktickets/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

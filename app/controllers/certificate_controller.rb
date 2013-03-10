@@ -1,9 +1,11 @@
 class CertificateController < ApplicationController
   def index
   	@certificates = Certificate.all
+     render :layout => 'admin'
   end
 
   def new
+     render :layout => 'admin'
   end
 
   def create

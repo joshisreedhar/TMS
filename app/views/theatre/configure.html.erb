@@ -1,10 +1,8 @@
-<h1>Configure Theatre show </h1>
-
-
-<%= form_tag :controller => 'showtime', :action => 'create' do %>
-<% @showtimes.each do |showtime| %>
-
-<%= check_box_tag 'show', showtime.id %> &nbsp;
-<% end %>
-<%= button_tag "Save", :disable_with => "Please wait..." %>
-<% end %>
+<h1>Configure Theatre</h1>
+<ul>
+	<% @theatres.each do |theatre| %>
+		<li>
+			<%= link_to theatre.name, :action=> 'configureshow',:id=>theatre.id%>
+		</li>		
+	<% end %>
+</ul>

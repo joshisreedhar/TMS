@@ -1,0 +1,24 @@
+<h1>Configure Theatre Show </h1>
+
+<div class="details">
+<%= form_tag :controller => 'show', :action => 'update' do %>
+<table>
+	<th>Theatre</th>
+	<th>Show Time</th>
+	<th>Show Price</th>
+	<th>Movie Playing</th>
+	<% @shows.each do |show| %>
+		<% theatre = Theatre.find(show.theatre_id) %>
+		<% showtime = Showtime.find(show.showtime_id) %>		
+		<tr>
+			<td><%= theatre.name %></td>
+			<td><%= showtime.time%></td>
+			<td><%= text_field_tag "price" %></td>
+			<td><%= select_tag "movies", options_from_collection_for_select(@movies, "id", "name")%></td>
+			<td><%= hidden_field_tag 'showid', show.id %></td>
+		</tr>
+	<% end %>	
+</table>
+<%= button_tag "Save", :disable_with => "Please wait..." %>
+<% end %>
+</div>

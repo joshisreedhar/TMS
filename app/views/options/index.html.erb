@@ -1,0 +1,21 @@
+<h1>Select Show</h1>
+
+<div class="details" >
+	<% @theatres.each do |theatreid| %>
+		<% id = theatreid.theatre_id %>
+		<div>
+			<% theatre = Theatre.find(id)%>
+			<%= theatre.name %>
+			<% theatreshows = Show.where(:theatre_id => id,:movie_id => @movie_id ) %>
+				<div class="site-nav">
+					<ul>
+						<% theatreshows.each do |theatreshow| %>
+							<li>
+								<%= link_to Showtime.where(:id=>theatreshow.showtime_id).first.time, :controller=>'booktickets', :action =>'index',:id=>theatreshow.id  %>
+							</li>
+						<% end %>
+					</ul>
+				</div>
+		</div>
+	<% end %>
+</div>

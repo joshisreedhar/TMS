@@ -1,6 +1,13 @@
 <h1> Show times </h1>
-
-<% @showtimes.each do |showtime| %>
-<%= showtime.time %>&nbsp;<%= showtime.description %><br>
-
-<% end %>
+<div class="details">
+<table>
+	<th>Show Time</th>
+	<th>Description</th>
+		<% @showtimes.each do |showtime| %>
+		<tr>
+			<td><%= showtime.time %></td>
+			<td><%= showtime.description %></td>
+		</tr>
+		<% end %>
+</table>
+</div>

@@ -1,7 +1,11 @@
 <h1>Movies</h1>
 
-<div>
-<% @movies.each do |movie| %>
-<%= link_to movie.name , :action=>'details', :id=>movie.id %>
+<div class="details">
+	<ul>
+		<% @movies.each do |movie| %>
+			<li>
+				<%= link_to movie.name , :action=>'details', :id=>movie.id %>
+			</li>
+		<%end%>
+	</ul>
 </div>
-<%end%>

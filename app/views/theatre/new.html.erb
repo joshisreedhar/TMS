@@ -8,7 +8,7 @@
 			<%= label_tag 'Theatre name' %>
 		</td>
 		<td class="datafield">
-			<%= text_field_tag 'theatre_name' %>
+			<%= text_field_tag 'theatre_name',nil,:class=>"datavalue" %>
 		</td>
 	</tr>
 	<tr>
@@ -16,7 +16,7 @@
 			<%= label_tag 'Image Url' %>			
 		</td>
 		<td class="datafield">
-			<%= text_field_tag 'image_url' %>
+			<%= text_field_tag 'image_url',nil,:class=>"datavalue" %>
 		</td>
 	</tr>	
 	<tr>
@@ -26,7 +26,7 @@
 		<td class="datafield">
 			<% @showtimes.each do |showtime| %>
 				<%= label_tag showtime.time %>
-				<%= check_box_tag 'show', showtime.id %>
+				<%= check_box_tag "show_#{showtime.id}", showtime.id %>
 			<% end %>
 		</td>
 	</tr>

@@ -592,7 +592,10 @@ ol, ul {
 	margin-bottom: 20px;
 }
 
-
+.details
+{
+margin-top: 20px
+}
 
 #wrap {
     padding: 1em;
@@ -615,4 +618,27 @@ h1 {
         background: #000;
         cursor: pointer;
     }
+}
+
+
+nav.site-nav { }
+ 
+nav.site-nav ul {
+height: 1.5em;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+ 
+nav.site-nav li {
+float: left;
+margin-right: .5em;
+}
+ 
+nav.site-nav a {
+margin-right: .5em;
+}
+
+nav.site-nav li:after {
+content: '|';
 }

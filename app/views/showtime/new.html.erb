@@ -1,8 +1,25 @@
-<h1> Show Times </h1>
+<h1> Add  Showtimes </h1>
 
+<div class="details">
 <%= form_tag :controller => 'showtime', :action => 'create' do %>
-<%= label_tag 'ShowTime' %>
-<%= text_field_tag 'time' %><br>
-<%= text_area_tag 'Description' %><br>
+<table>
+	<tr>
+		<td>
+			<%= label_tag 'ShowTime' %>
+		</td>
+		<td class="datafield">
+			<%= text_field_tag 'time' ,nil,:class=>"datavalue"%><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= label_tag 'Description' %>
+		</td>
+		<td class="datafield">
+			<%= text_area_tag 'Description' %>
+		</td>
+	</tr>
+</table>
 <%= button_tag "Save", :disable_with => "Please wait..." %>
  <% end %>
+</div>

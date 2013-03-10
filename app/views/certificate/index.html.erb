@@ -1,4 +1,9 @@
-<% @certificates.each do |certificate| %>
+<h1> Configured certificates </h1>
 
-<%=  certificate.name %><br>
-<%end %>
+<div id="details">
+	<ul>
+		<% @certificates.each do |certificate| %>
+			<li><%=  certificate.name %></li>
+		<%end %>
+	</ul>
+</div>

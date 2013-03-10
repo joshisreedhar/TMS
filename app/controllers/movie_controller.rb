@@ -9,7 +9,7 @@ class MovieController < ApplicationController
   	render :layout => 'admin'
   end
 
-  def create
+  def create    
   	@movie = Movie.new
     @movie.name = params[:movie_name]
     @movie.description = params[:description]
@@ -29,6 +29,7 @@ class MovieController < ApplicationController
 
   def details
     @movie = Movie.find(params[:id])
+    @certificate = Certificate.find(@movie.certificate_id)
       render :layout => 'admin'
   end
 end

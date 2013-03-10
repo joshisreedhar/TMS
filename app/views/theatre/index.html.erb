@@ -1,5 +1,8 @@
 <h1> Theatres </h1>
-
-<% @theatres.each do |theatre| %>
-
-<% end %>
+<ul>
+	<% @theatres.each do |theatre| %>
+		<li>
+			<%= link_to theatre.name, :action=> 'details',:id=>theatre.id%>
+		</li>		
+	<% end %>
+</ul>
