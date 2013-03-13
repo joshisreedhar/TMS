@@ -43,3 +43,19 @@ function blockticket(elementid)
 		
 	}	
 }
+
+function togglemoviestheatres()
+{
+
+}
+
+$(document).ready(function() {
+$('#bookingtype_Movie').bind('click', function() {
+	document.getElementById('cmbMovie').className = "cmbBox";
+	document.getElementById('cmbTheatre').className =" hiddenDiv";
+});
+$('#bookingtype_Cinema').bind('click', function() {
+	document.getElementById('cmbTheatre').className = "cmbBox";
+	document.getElementById('cmbMovie').className =" hiddenDiv";
+});
+});

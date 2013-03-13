@@ -3,6 +3,7 @@ class NowShowingController < ApplicationController
   	@movies = Movie.all
   	@moviedetails = Movie.all
   	@certificates = Certificate.all  	
+    @theatres = Theatre.all
   	@movies.each do |movie|  
   	if movie.certificate_id  			
   		certificate = Certificate.find(movie.certificate_id)  		
