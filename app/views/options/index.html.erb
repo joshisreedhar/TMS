@@ -11,7 +11,7 @@
 					<ul>
 						<% theatreshows.each do |theatreshow| %>
 							<li>
-								<%= link_to Showtime.where(:id=>theatreshow.showtime_id).first.time, :controller=>'booktickets', :action =>'index',:id=>theatreshow.id  %>
+								<%= link_to Showtime.where(:id=>theatreshow.showtime_id).first.time, :controller=>'ticketselection', :action =>'index', :id=>theatreshow.id, :showdate=>@showdate %>
 							</li>
 						<% end %>
 					</ul>

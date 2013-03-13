@@ -1,4 +1,8 @@
 TMS::Application.routes.draw do
+  get "pay/index"
+
+  get "ticketselection/index"
+
   get "options/index"
 
   get "show/update"
@@ -46,6 +50,12 @@ TMS::Application.routes.draw do
   post "options/index"
 
   get "booktickets/index"
+
+  get "ticketselection/index"
+
+  post "pay/index"
+
+  post "pay/submit"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

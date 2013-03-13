@@ -1,5 +1,6 @@
 class OptionsController < ApplicationController
   def index
+  	@showdate =  params[:datepicker]
   	@movie_id = params[:movies]
   	@shows = Show.where(:movie_id =>@movie_id)
   	@theatres = Show.where(:movie_id => params[:movies]).select(:theatre_id).uniq  	

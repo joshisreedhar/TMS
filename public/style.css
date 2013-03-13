@@ -642,3 +642,180 @@ margin-right: .5em;
 nav.site-nav li:after {
 content: '|';
 }
+
+
+.padbuy {
+    float: left;
+    padding: 10px 20px;
+    width: 840px;
+}
+
+
+.hdname {
+    border-bottom: 1px solid #CCCCCC;
+    float: left;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    width: 840px;
+}
+.etname {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 580px;
+}
+
+.ciname {
+    float: right;
+    font-weight: bold;
+    text-align: right;
+    width: 260px;
+}
+
+.ciname > span {
+    float: left;
+    width: 100%;
+}
+
+.cinema {
+    color: #C9461C;
+}
+
+
+.buyselbox {
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+.buyselbox select {
+    border: 1px solid #B6B6B6;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 20px;
+    padding: 8px 5px;
+}
+.wt230 {
+    width: 230px;
+}
+
+.wt80 {
+    width: 80px;
+}
+
+.buyselbox select {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.seatlayout {
+    float: left;
+    width: 100%;
+}
+
+.actseat {
+    border: 1px solid #B6B6B6;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 320px;
+    margin-right: 18px;
+    overflow: auto;
+    padding: 10px 20px 0;
+    width: 620px;
+}
+
+
+#tblSeatInfo table {
+    margin: 0 auto;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.cssRow {
+    background-color: #E6E6E6;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cssDot {
+    font-weight: bold;
+}
+
+.hiddenDiv {
+	display: none;
+	}
+.visibleDiv {
+	display: block;
+	border: 1px grey solid;
+	}
+
+
+.seatxt {
+    float: left;
+    margin-top: 1px;
+}
+
+
+.chair {
+    float: left;
+    width: 28px;
+}
+
+
+.legendseat {
+    float: left;
+    margin-top: 12px;
+    width: 100%;
+}
+
+
+.seatleg {
+    float: left;
+    width: 160px;
+}
+
+
+.odsumrgt {    
+    width: 250px;
+}
+
+
+.odcont {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    width: 250px;
+}
+
+
+.odsum {
+    float: left;
+    width: 220px;
+}
+
+
+.rptr {
+    float: left;
+    margin-bottom: 5px;
+    padding: 0 0 0 15px;
+    width: 235px;
+}
+
+.Gtotal {
+    background: none repeat scroll 0 0 #FFDC42;
+    color: #000000;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 4px;
+    padding: 10px 15px;
+    text-align: center;
+    width: 220px;
+}

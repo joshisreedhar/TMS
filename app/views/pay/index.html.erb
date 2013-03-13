@@ -1,0 +1,69 @@
+<h1>Order Summary</h1>
+
+<%= form_tag :action=>'submit' do %>
+<div class="details">
+	<div class="padbuy">
+		<div class="hdname">
+			<div style="width:auto;" class="etname" id="EName"><%= @movie.name %> </div>
+			<div class="ciname" id="EDtl">
+				<span><%= @showdate %>, <%= @showtime.time%></span>
+				<span class="cinema"><%= @theatre.name %></span>
+			</div>
+			<span class="adultmov" id="CenMsg" style="display: none;">Adult Movie</span>
+		</div>
+	</div>
+	<div class="odsumrgt">
+				<div class="odcont">					
+					<div class="odsum" id="dOrderSummary">
+						<div class="rptr">
+							<div class="hdr" id="OSTikAmt">
+								<span class="wt90 bold">Ticket(s):</span>
+								<span class="wt130">Rs. 300.00</span>
+							</div>
+						</div>
+						<div class="rptr" id="dTickets">
+							<div class="hdr" id="OSSTInfo">
+								<span class="wt90 bold">Seat Info:</span>
+								<span class="wt130">GOLD-<%= @seats %></span>
+							</div>
+						</div>
+						<div class="rptr">
+							<div class="hdr" id="OSBKFee">
+								<span class="wt90 bold">+ Conv. Fee :</span>
+								<span class="wt130">Rs.33.70</span>
+							</div>
+						</div>
+						<div style="display:none;" class="rptr" id="OSFC">
+							<div class="hdr">
+								<span class="wt90 bold">+ ADD-ONS :</span>
+								<span class="wt75">Rs. 450.00</span>
+								<!--a href="#" class="showmore">show more</a-->
+							</div>
+						</div>
+						<div style="display:none;" class="rptr" id="FCDtl"></div>
+						<div style="background: #FFF9D9;" class="Gtotal" id="OSTotal">
+							<span>Rs.333.70</span>
+						</div>
+
+						<!--<div id="OSDonation" class="donation" style="display: none;">
+							<div class="donatecall"></div>
+							<div class="donrs">
+								<span class="bold">A Day At The Movies</span> might be our favorite timepass but for some it is a far-fetched dream...<br>
+								<a href="/donation" target="_blank">read more</a>
+							</div>
+							<div class="bookasmile">
+								<span class="dntext">DONATE</span>
+								<span class="retext">
+									Re.<span class="rstext">1</span>
+								</span>
+							</div>
+							<div class="fl_100">
+								<input id="FLDonation" type="checkbox"/> I agree to Donate Re. 1
+							</div>
+						</div>-->
+					</div>
+				</div>
+				<%= submit_tag "proceed to payment",  :style=>'margin-top:10px' %>
+			</div>
+</div>
+<% end %>
