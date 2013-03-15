@@ -1,1 +1,21 @@
-<%= params[:id] %>
+<div>
+	<h3>Manage Movies</h3>
+		<div>
+			<p>
+				<ul>
+					<li><%= link_to "Show Movies", :controller => 'movie', :action => 'index' %></li>
+					<li><%= link_to "Add new movie", :controller => 'movie', :action => 'new' %></li>
+				<ul>
+			</p>
+		</div>
+	<h3>Manage Theatres</h3>
+		<div>
+			<p>
+				<ul>
+					<li><%= link_to "Show Theatres", :controller => 'theatre', :action => 'index'  %></li>					
+					<li><%= link_to "Configure Theatre Shows", :controller => 'theatre', :action => 'configure'  %></li>
+					<li><%= link_to "Configure Theatre Seating", :controller => 'theatre', :action => 'configure'  %></li>
+				</ul>
+			</p>
+		</div>
+</div>
