@@ -1,4 +1,6 @@
 TMS::Application.routes.draw do
+  get "sessions/new"
+
   get "pay/index"
 
   get "ticketselection/index"
@@ -57,6 +59,11 @@ TMS::Application.routes.draw do
 
   post "pay/submit"
 
+  get "log_in" => "session#new", :as => "log_in"
+  resources :sessions
+
+
+  get "admin/theatreindex"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
