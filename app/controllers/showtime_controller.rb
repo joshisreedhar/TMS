@@ -22,7 +22,6 @@ class ShowtimeController < ApplicationController
         end
       end
       render 'new' ,:layout=> 'admin'
-  	end
-    render :layout => 'admin'
+  	end    
   end
 end
