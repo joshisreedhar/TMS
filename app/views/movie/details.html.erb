@@ -1,7 +1,9 @@
 <h1><%= @movie.name %> </h1>
 
 <div class="moviewpreview">
-<%= image_tag(@movie.small_image_url) %>
+	<% if @movie.small_image_url && @movie.small_image_url != "" %>
+		<%= image_tag(@movie.small_image_url) %>
+	<% end %>
 
 	<table class="moviewpreview">
 		<tr>

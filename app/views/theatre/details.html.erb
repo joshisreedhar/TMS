@@ -1,6 +1,8 @@
 <h1><%= @theatre.name %></h1>
 
-<div class="details">
-<%= image_tag(@theatre.imageurl, :alt =>'no img')%>
+<div class="details">	
+	<% if @theatre.imageurl && @theatre.imageurl != "" %>
+		<%= image_tag(@theatre.imageurl, :alt =>'no img')%>
+	<% end %>
 <p> <%= @theatre.address%></p>
 </div>
