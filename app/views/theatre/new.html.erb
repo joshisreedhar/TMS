@@ -32,6 +32,12 @@
 	</tr>
 	<tr>
 		<td>
+			<%= label_tag 'Theatre admin' %>
+		</td>
+		<td class="datafield"><%= select_tag "userid", options_from_collection_for_select(@users, "id", "email") %></td>
+	</tr>
+	<tr>
+		<td>
 			<%= label_tag 'Address' %>
 		</td>
 		<td class="datafield">

@@ -1,6 +1,8 @@
 TMS::Application.routes.draw do
   get "sessions/new"
 
+  get "sessions/signout"
+
   get "pay/index"
 
   get "ticketselection/index"

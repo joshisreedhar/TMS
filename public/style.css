@@ -61,6 +61,11 @@ a:hover {
 	margin: 0px auto;
 }
 
+.headercontainer
+{
+	margin: 0px auto;
+}
+
 /* Header */
 
 #header-wrapper {
@@ -198,7 +203,7 @@ a:hover {
 	padding: 0px 0px 0px 0px;
 	list-style: none;
 	line-height: normal;
-	text-align: center;
+	text-align: right;
 }
 
 #menu li {

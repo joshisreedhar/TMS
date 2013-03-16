@@ -23,6 +23,16 @@ collapsible: true,
 </head>
 <body>
 <div id="wrapper">	
+	<div id="menu-wrapper">
+		<div id="menu" class="headercontainer">
+			<ul>
+			<%if session[:userid]%>
+				<li><a href="/sessions/signout">signout</a>
+			<%else%>
+				<li><a href="/sessions/new">signin</a>
+			<%end%>
+		</div>
+	</div>
 	<div id="logo" class="container">
 		<h1><a href="/">Book My Tickets </a></h1>
 		<p>watch movie your way</p>

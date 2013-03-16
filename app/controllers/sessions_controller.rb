@@ -19,4 +19,9 @@ class SessionsController < ApplicationController
   	end
 
   end
+
+  def signout
+      session[:userid]= nil
+      render :new ,:layout => 'admin'
+  end
 end
