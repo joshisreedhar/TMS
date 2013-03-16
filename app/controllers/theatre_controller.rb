@@ -26,7 +26,13 @@ class TheatreController < ApplicationController
         end      
   		redirect_to :action=>'configureshow' ,:id=>@newtheatre.id
   	else
-  		render('new')
+      @showtimes = Showtime.all
+      if @newtheatre.errors
+        @newtheatre.errors.full_messages.each  do |message|
+          flash.now.alert = message
+        end
+      end
+  		render 'new' ,:layout=> 'admin'
   	end
 
   end

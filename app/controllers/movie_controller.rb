@@ -9,8 +9,8 @@ class MovieController < ApplicationController
   	render :layout => 'admin'
   end
 
-  def create    
-  	@movie = Movie.new
+  def create
+    @movie = Movie.new
     @movie.name = params[:movie_name]
     @movie.description = params[:description]
     @movie.lead_cast = params[:lead_cast]
@@ -23,13 +23,19 @@ class MovieController < ApplicationController
     if @movie.save
       redirect_to :action=>'index'
     else
-      render('new')
-    end
+      @certificates = Certificate.all
+      if @movie.errors
+        @movie.errors.full_messages.each  do |message|
+          flash.now.alert = message
+        end
+      end
+      render 'new' ,:layout=> 'admin'
+    end    
   end 
 
   def details
     @movie = Movie.find(params[:id])
     @certificate = Certificate.find(@movie.certificate_id)
-      render :layout => 'admin'
+    render :layout => 'admin'
   end
 end

@@ -819,3 +819,8 @@ table {
     text-align: center;
     width: 220px;
 }
+.flashmessage
+{
+   color: red;
+    margin-bottom: 10px;
+}

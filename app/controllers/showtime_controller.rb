@@ -15,8 +15,13 @@ class ShowtimeController < ApplicationController
 
   	if @newshowtime.save
   		redirect_to :action=> 'index'
-  	else
-  		render('new')
+  	else  		 
+      if @newshowtime.errors
+        @newshowtime.errors.full_messages.each  do |message|
+          flash.now.alert = message
+        end
+      end
+      render 'new' ,:layout=> 'admin'
   	end
     render :layout => 'admin'
   end
